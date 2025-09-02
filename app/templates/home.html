@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mainak - Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" href="/static/images/logo.png" type="image/png">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="Logo" class="logo-img" /> Mainak
+            </div>
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contributions">GitHub</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-card">
+            <div class="hero-left">
+                <img src="https://github.com/0xmainak.png" alt="Profile" class="profile-img" />
+                <div class="hero-info">
+                    <h1>Hello, I'm <span class="highlight">Mainak</span></h1>
+                    <p>Full Stack Developer | AI Enthusiast | Problem Solver</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-widgets">
+                    <div class="clock-widget">
+                        <div class="location">📍 Kolkata, India</div>
+                        <div id="clock" class="clock"></div>
+                        <div class="timezone">GMT+5:30</div>
+                    </div>
+                    <div class="spotify-widget">
+                        <div class="spotify-header">🎵 Currently Listening</div>
+                        <div id="spotify-widget">
+                            <p>Loading...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I'm a passionate full-stack developer who loves building innovative web applications and exploring cutting-edge technologies. 
+                    With expertise in Python, FastAPI, React, and modern development tools, I create scalable solutions that make a difference.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>3+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Projects Built</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Technologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card featured">
+                <div class="project-header">
+                    <h3>Portfolio Website</h3>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live</a>
+                        <a href="#" class="project-link">Code</a>
+                    </div>
+                </div>
+                <p>A responsive personal portfolio built with FastAPI, featuring real-time GitHub contributions, Spotify integration, and modern dark theme.</p>
+                <div class="project-tech">
+                    <span>FastAPI</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>CSS</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>FastAPI Backend</h3>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live</a>
+                        <a href="#" class="project-link">Code</a>
+                    </div>
+                </div>
+                <p>REST API with FastAPI, PostgreSQL, and JWT authentication. Features user management, data validation, and API documentation.</p>
+                <div class="project-tech">
+                    <span>FastAPI</span>
+                    <span>PostgreSQL</span>
+                    <span>JWT</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Machine Learning App</h3>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live</a>
+                        <a href="#" class="project-link">Code</a>
+                    </div>
+                </div>
+                <p>Interactive ML model deployed with Streamlit & FastAPI. Includes data preprocessing, model training, and real-time predictions.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>Streamlit</span>
+                    <span>TensorFlow</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="section">
+        <h2>💻 Tech Stack</h2>
+        <div class="tech-grid">
+            <div class="tech-category">
+                <h3>Core</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                        <span>C++</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>Backend</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">
+                        <span>Flask</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.worldvectorlogo.com/logos/fastapi.svg" alt="FastAPI">
+                        <span>FastAPI</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                        <span>Node.js</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>Frontend</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        <span>React</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind">
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>Database</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="PostgreSQL">
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>DevOps</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS">
+                        <span>AWS</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP">
+                        <span>GCP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Contributions Section -->
+    <section id="contributions" class="section">
+        <div id="github-contributions" style="text-align:center;">
+            <p>Loading...</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Let's Connect</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:mainak@example.com">mainak@example.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://linkedin.com/in/mainak" target="_blank">Connect with me</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🚀</div>
+                    <div>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/0xmainak" target="_blank">@0xmainak</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send me a message</h3>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+
+</html>

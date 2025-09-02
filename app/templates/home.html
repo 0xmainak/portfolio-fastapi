@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="/static/images/logo.png" alt="Logo" class="logo-img" /> Mainak
+                <img src="{{DP_URL}}" alt="Logo" class="logo-img" /> Mainak
             </div>
             <div class="mobile-menu-toggle" id="mobile-menu-toggle">
                 <span></span>
@@ -36,7 +36,7 @@
     <section class="hero">
         <div class="hero-card">
             <div class="hero-left">
-                <img src="https://github.com/0xmainak.png" alt="Profile" class="profile-img" />
+                <img src="{{DP_URL}}" alt="Profile" class="profile-img" />
                 <div class="hero-info">
                     <h1>Hello, I'm <span class="highlight">Mainak</span></h1>
                     <p>Full Stack Developer | AI Enthusiast | Problem Solver</p>
@@ -49,12 +49,22 @@
             <div class="hero-right">
                 <div class="hero-widgets">
                     <div class="clock-widget">
-                        <div class="location">📍 Kolkata, India</div>
+                        <div class="location">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#00d4ff"/>
+                            </svg>
+                            Kolkata, India
+                        </div>
                         <div id="clock" class="clock"></div>
                         <div class="timezone">GMT+5:30</div>
                     </div>
                     <div class="spotify-widget">
-                        <div class="spotify-header">🎵 Currently Listening</div>
+                        <div class="spotify-header">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.959-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.361 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" fill="#1db954"/>
+                            </svg>
+                            Currently Listening
+                        </div>
                         <div id="spotify-widget">
                             <p>Loading...</p>
                         </div>
@@ -75,11 +85,11 @@
                 </p>
                 <div class="about-stats">
                     <div class="stat">
-                        <h3>3+</h3>
+                        <h3>2+</h3>
                         <p>Years Experience</p>
                     </div>
                     <div class="stat">
-                        <h3>50+</h3>
+                        <h3>20+</h3>
                         <p>Projects Built</p>
                     </div>
                     <div class="stat">
@@ -100,8 +110,8 @@
                 <div class="project-header">
                     <h3>Portfolio Website</h3>
                     <div class="project-links">
-                        <a href="#" class="project-link">Live</a>
-                        <a href="#" class="project-link">Code</a>
+                        <a href="https://mainak.me" class="project-link">Live</a>
+                        <a href="https://github.com/0xmainak/portfolio-fastapi" target="_blank" class="project-link">Code</a>
                     </div>
                 </div>
                 <p>A responsive personal portfolio built with FastAPI, featuring real-time GitHub contributions, Spotify integration, and modern dark theme.</p>
@@ -114,32 +124,35 @@
             </div>
             <div class="project-card">
                 <div class="project-header">
-                    <h3>FastAPI Backend</h3>
+                    <h3>Saavn.py</h3>
                     <div class="project-links">
-                        <a href="#" class="project-link">Live</a>
-                        <a href="#" class="project-link">Code</a>
+                        <a href="https://pypi.org/project/saavn.py/" target="_blank" class="project-link">Live</a>
+                        <a href="https://github.com/himonshuuu/saavn.py" target="_blank" class="project-link">Code</a>
                     </div>
                 </div>
-                <p>REST API with FastAPI, PostgreSQL, and JWT authentication. Features user management, data validation, and API documentation.</p>
+                <p>Contributed to saavn.py, a python module for fetching musics from jiosaavn, High quality music streaming.</p>
                 <div class="project-tech">
-                    <span>FastAPI</span>
-                    <span>PostgreSQL</span>
-                    <span>JWT</span>
+                    <span>pip</span>
+                    <span>PyPi</span>
+                    <span>Py module</span>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-header">
-                    <h3>Machine Learning App</h3>
+                    <h3>Sustainovate</h3>
                     <div class="project-links">
-                        <a href="#" class="project-link">Live</a>
-                        <a href="#" class="project-link">Code</a>
+                        <a href="https://sustainovate.mainak.me/" target="_blank" class="project-link">Live</a>
+                        <a href="https://github.com/Sustainovate/sustainovate-Web-Api" target="_blank" class="project-link">API</a>
+                        <a href="https://github.com/Sustainovate/sustainovate-Web-frontend" target="_blank" class="project-link">Frontend</a>
                     </div>
                 </div>
-                <p>Interactive ML model deployed with Streamlit & FastAPI. Includes data preprocessing, model training, and real-time predictions.</p>
+                <p>One of the contributors of Sustainovate's Website, a club powered by Techno India University.</p>
                 <div class="project-tech">
-                    <span>Python</span>
-                    <span>Streamlit</span>
-                    <span>TensorFlow</span>
+                    <span>Next.js</span>
+                    <span>Express.js</span>
+                    <span>Tailwind</span>
+                    <span>Redis</span>
+                    <span>MongoDB</span>
                 </div>
             </div>
         </div>
@@ -153,16 +166,20 @@
                 <h3>Core</h3>
                 <div class="tech-items">
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="Python">
                         <span>Python</span>
                     </div>
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                        <img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="TypeScript">
                         <span>TypeScript</span>
                     </div>
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                        <img src="https://techstack-generator.vercel.app/cpp-icon.svg" alt="C++">
                         <span>C++</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://techstack-generator.vercel.app/java-icon.svg" alt="Java">
+                        <span>Java</span>
                     </div>
                 </div>
             </div>
@@ -171,16 +188,20 @@
                 <h3>Backend</h3>
                 <div class="tech-items">
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">
+                        <img src="https://skillicons.dev/icons?i=flask" alt="Flask">
                         <span>Flask</span>
                     </div>
                     <div class="tech-item">
-                        <img src="https://cdn.worldvectorlogo.com/logos/fastapi.svg" alt="FastAPI">
+                        <img src="https://skillicons.dev/icons?i=fastapi" alt="FastAPI">
                         <span>FastAPI</span>
                     </div>
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                        <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js">
                         <span>Node.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://skillicons.dev/icons?i=express" alt="Express">
+                        <span>Express</span>
                     </div>
                 </div>
             </div>
@@ -189,16 +210,20 @@
                 <h3>Frontend</h3>
                 <div class="tech-items">
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="React">
                         <span>React</span>
                     </div>
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind">
+                        <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind">
                         <span>Tailwind</span>
                     </div>
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+                        <img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap">
                         <span>Bootstrap</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://skillicons.dev/icons?i=next" alt="Next.js">
+                        <span>Next.js</span>
                     </div>
                 </div>
             </div>
@@ -207,16 +232,20 @@
                 <h3>Database</h3>
                 <div class="tech-items">
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                        <img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="MySQL">
                         <span>MySQL</span>
                     </div>
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                        <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB">
                         <span>MongoDB</span>
                     </div>
                     <div class="tech-item">
-                        <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="PostgreSQL">
+                        <img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL">
                         <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://skillicons.dev/icons?i=redis" alt="Redis">
+                        <span>Redis</span>
                     </div>
                 </div>
             </div>
@@ -225,16 +254,20 @@
                 <h3>DevOps</h3>
                 <div class="tech-items">
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                        <img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="Docker">
                         <span>Docker</span>
                     </div>
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS">
+                        <img src="https://techstack-generator.vercel.app/aws-icon.svg" alt="AWS">
                         <span>AWS</span>
                     </div>
                     <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP">
+                        <img src="https://skillicons.dev/icons?i=gcp" alt="GCP">
                         <span>GCP</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" alt="Kubernetes">
+                        <span>Kubernetes</span>  
                     </div>
                 </div>
             </div>
@@ -254,21 +287,33 @@
         <div class="contact-content">
             <div class="contact-info">
                 <div class="contact-item">
-                    <div class="contact-icon">📧</div>
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#00d4ff"/>
+                        </svg>
+                    </div>
                     <div>
                         <h4>Email</h4>
-                        <a href="mailto:mainak@example.com">mainak@example.com</a>
+                        <a href="mailto:mainakpanda30@gmail.com">mainakpanda30@gmail.com</a>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon">💼</div>
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#0077b5"/>
+                        </svg>
+                    </div>
                     <div>
                         <h4>LinkedIn</h4>
-                        <a href="https://linkedin.com/in/mainak" target="_blank">Connect with me</a>
+                        <a href="https://linkedin.com/in/mainak-panda" target="_blank">Connect with me</a>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon">🚀</div>
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#333"/>
+                        </svg>
+                    </div>
                     <div>
                         <h4>GitHub</h4>
                         <a href="https://github.com/0xmainak" target="_blank">@0xmainak</a>
@@ -289,7 +334,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Your Name. All Rights Reserved.</p>
+        <p>© 2025 Mainak Panda. All Rights Reserved.</p>
     </footer>
 
     <script src="/static/js/script.js"></script>

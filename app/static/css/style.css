@@ -434,6 +434,14 @@ body {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.location svg {
+  flex-shrink: 0;
 }
 
 .clock {
@@ -466,6 +474,14 @@ body {
   font-weight: 600;
   margin-bottom: 1rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.spotify-header svg {
+  flex-shrink: 0;
 }
 
 #spotify-widget {
@@ -953,6 +969,21 @@ footer::before {
   background: rgba(0, 212, 255, 0.1);
   border-radius: 50%;
   border: 2px solid rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.contact-item:hover .contact-icon svg {
+  transform: scale(1.1);
 }
 
 .contact-item h4 {

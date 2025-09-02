@@ -14,5 +14,5 @@ templates = Jinja2Templates(directory="app/templates")
 def read_root(request: Request):
     return templates.TemplateResponse("home.html", {
         "request": request,
-        "username": os.getenv("GITHUB_USERNAME")
+        "DP_URL": os.getenv("DP_URL")
     })

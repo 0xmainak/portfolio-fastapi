@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "fastapi-app",
+      "script": "uv",
+      "args": [
+        "run",
+        "gunicorn",
+        "-k", "uvicorn.workers.UvicornWorker",
+        "main:app",
+        "--bind", "0.0.0.0:8000",
+        "--workers", "4"
+      ],
+      "instances": 1,
+      "exec_mode": "fork",
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": "512M",
+      "env": {
+        "ENVIRONMENT": "production",
+        "PORT": "8000"
+      }
+    }
+  ]
+}

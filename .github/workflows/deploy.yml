@@ -1,0 +1,39 @@
+name: Deploy FastAPI App
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.AZURE_HOST }}
+          username: ${{ secrets.AZURE_USER }}
+          key: ${{ secrets.AZURE_SSH_KEY }}
+          script: |
+            # go to your project folder
+            cd ~/PORTFOLIO-FASTAPI
+
+            # pull the latest code
+            git pull origin main
+
+            # install uv if missing
+            if ! command -v uv &> /dev/null
+            then
+              curl -LsSf https://astral.sh/uv/install.sh | sh
+              export PATH="$HOME/.local/bin:$PATH"
+            fi
+
+            # sync Python dependencies
+            uv sync requirements.txt
+
+            # restart your PM2 process
+            pm2 restart fastapi-app 

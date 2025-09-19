@@ -11,7 +11,6 @@ GITHUB_TOKEN = os.getenv("GITHUB_PERSONAL_ACCESS_TOKEN")
 
 @router.get("/contributions")
 def get_contributions():
-    # GitHub GraphQL API query for contributions
     query = """
     query($username: String!) {
         user(login: $username) {
@@ -51,12 +50,10 @@ def get_contributions():
     if "errors" in data:
         return JSONResponse({"error": "GraphQL errors", "details": data["errors"]}, status_code=400)
     
-    # Extract contribution data
     calendar = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
     total_contributions = calendar["totalContributions"]
     weeks = calendar["weeks"]
     
-    # Process weeks to get last 53 weeks (1 year)
     all_days = []
     for week in weeks:
         for day in week["contributionDays"]:
@@ -65,7 +62,6 @@ def get_contributions():
                 "count": day["contributionCount"]
             })
     
-    # Get last 365 days
     all_days = all_days[-365:] if len(all_days) > 365 else all_days
     
     return JSONResponse({

@@ -1,4 +1,3 @@
-// Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
@@ -7,7 +6,6 @@ mobileMenuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Close mobile menu when clicking on a link
 document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => {
     mobileMenuToggle.classList.remove("active");
@@ -15,7 +13,6 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   });
 });
 
-// Close mobile menu when clicking outside
 document.addEventListener("click", (e) => {
   if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
     mobileMenuToggle.classList.remove("active");
@@ -23,7 +20,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Smooth scroll for navigation
 document.querySelectorAll(".nav-links a").forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -37,7 +33,6 @@ document.querySelectorAll(".nav-links a").forEach(anchor => {
 
 function updateClock() {
   const now = new Date();
-  // Format time in your timezone (e.g., Asia/Kolkata)
   const timeString = now.toLocaleTimeString("en-IN", {
     hour: "2-digit",
     minute: "2-digit",
@@ -49,11 +44,9 @@ function updateClock() {
 }
 
 
-// Run immediately + repeat every second
 updateClock();
 setInterval(updateClock, 1000);
 
-// GitHub Contributions Graph
 async function fetchContributions() {
   try {
     const res = await fetch("/github/contributions");
@@ -61,7 +54,6 @@ async function fetchContributions() {
     const container = document.getElementById("github-contributions");
     
     if (data.days && data.total_contributions) {
-      // Create the contribution grid
       let gridHTML = `
         <div class="contributions-header">
           <h2>GitHub Contributions</h2>
@@ -70,7 +62,6 @@ async function fetchContributions() {
         <div class="contributions-grid">
       `;
       
-      // Create month labels
       const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
       let monthLabels = '<div class="month-labels">';
       for (let i = 0; i < 12; i++) {
@@ -80,14 +71,12 @@ async function fetchContributions() {
       
       gridHTML += monthLabels;
       
-      // Create day grid
       gridHTML += '<div class="days-grid">';
       
-      // Add day labels
       const dayLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
       gridHTML += '<div class="day-labels">';
       dayLabels.forEach((day, index) => {
-        if (index % 2 === 1) { // Show only Mon, Wed, Fri
+        if (index % 2 === 1) {
           gridHTML += `<span>${day}</span>`;
         } else {
           gridHTML += '<span></span>';
@@ -95,7 +84,6 @@ async function fetchContributions() {
       });
       gridHTML += '</div>';
       
-      // Add contribution squares
       gridHTML += '<div class="contributions-squares">';
       data.days.forEach(day => {
         const level = getContributionLevel(day.count);
@@ -103,10 +91,9 @@ async function fetchContributions() {
       });
       gridHTML += '</div>';
       
-      gridHTML += '</div>'; // close days-grid
-      gridHTML += '</div>'; // close contributions-grid
+      gridHTML += '</div>'; 
+      gridHTML += '</div>';
       
-      // Add legend
       gridHTML += `
         <div class="contrib-legend">
           <span>Less</span>
@@ -140,10 +127,6 @@ function getContributionLevel(count) {
 
 fetchContributions();
 
-
-
-
-
 async function fetchSpotify() {
   try {
     const res = await fetch("/spotify/now-playing");
@@ -168,6 +151,5 @@ async function fetchSpotify() {
   }
 }
 
-// Run every 10s
 fetchSpotify();
 setInterval(fetchSpotify, 10000);

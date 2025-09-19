@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.AZURE_SSH_KEY }}
           script: |
             # go to your project folder
-            cd ~/PORTFOLIO-FASTAPI
+            cd ~/portfolio-fastapi
 
             # pull the latest code
             git pull origin main
@@ -33,7 +33,7 @@ jobs:
             fi
 
             # sync Python dependencies
-            uv sync requirements.txt
+            uv sync
 
             # restart your PM2 process
             pm2 restart fastapi-app 
